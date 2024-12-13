@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Tailwind CSS</title>
+    <!-- Incluye Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      body{
+        background-image: url(img/fondo2.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      } 
+    
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Formulario de Contacto</h2>
+        <form action="and.php" method="POST">
+            <div class="mb-4">
+                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            </div>
+            <div class="mb-4">
+                <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="mt-1 p-2 border border-gray-300 rounded-md w-full" required>
+            </div>
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-700 w-full">Enviar</button>
+                </form>
+    </div>
+</body>
+</html>

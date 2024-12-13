@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="and.php" method="POST">
+        Name: <input type="text" name="name"><br>
+        E-mail: <input type="text" name="email"><br>
+        Edad: <input type="num" name="edad"><br>
+        Tipo de sangre: <input type="text" name="tipoDeSangre"><br>
+        Documento: <input type="num" name="documento"><br>
+        Direccion: <input type="text" name="direccion"><br>
+        genero: <br><input type="radio" name="genero" value="Hombre">Hombre<br>
+                <input type="radio" name="genero" value="Mujer">Mujer<br>
+                <input type="radio" name="genero" value="NoSabe">No Sabe<br>
+        
+        que medio de transporte le gustaria ? <br>
+        <select name="transporte" id="leGustaria">
+            <option value="selecionar">Seleccionar</option>
+            <option value="carro">Carro</option>
+            <option value="transportePublico">Transporte publico</option>
+            <option value="moto">Moto</option>
+            <option value="bicicleta">Bicicleta</option>
+            <option value="scooter">Scooter</option>
+        </select>
+
+        <input type="submit">
+        </form>
+</body>
+</html>
