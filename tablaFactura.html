@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Factura</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .custom-form {
+            max-width: 100%;  
+            min-width: 300px;  
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            opacity: 0.95; 
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            background-image: url('img/fondoF.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative; /* Añadido para posicionar el botón */
+        }
+        h2 {
+            font-size: 36px;
+            color: #ff6600;
+            text-shadow: 2px 2px #cccccc;
+        }
+        .top-left-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #771111;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .top-left-button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Factura</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <button class="top-left-button" onclick="location.href='menuproyecto.html'">Volver al Menú</button> 
+    <div class="w-full lg:w-1/2 xl:w-1/3 custom-form">
+        <h2 class="text-2xl font-semibold text-gray-800 text-center mb-6">Gestión de Factura</h2>
+        <form action="tablaFactura.php" method="POST" class="flex flex-col space-y-4">
+            <!-- ID Cliente -->
+            <div class="flex flex-col mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="id_cliente">ID del Cliente</label>
+                <input 
+                    type="number" 
+                    name="id_cliente"
+                    id="id_cliente"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el id del cliente">
+            </div>
+
+            <!-- ID Producto -->
+            <div class="flex flex-col mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="id_producto">ID del Producto</label>
+                <input 
+                    type="number" 
+                    name="id_producto" 
+                    id="id_producto" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el id del producto">
+            </div>
+
+            <!-- Cantidad -->
+            <div class="flex flex-col mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="cantidad">Cantidad</label>
+                <input 
+                    type="number" 
+                    name="cantidad" 
+                    id="cantidad" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese la cantidad">
+            </div>
+
+            <!-- Valor -->
+            <div class="flex flex-col mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="valor">Valor</label>
+                <input 
+                    type="number" 
+                    name="valor" 
+                    id="valor" 
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Ingrese el valor ">
+            </div>
+
+            <!-- Acción --> 
+             <div>
+                <input type="hidden" name="accion" value="create">
+             </div>
+             
+
+            <!-- Botones CRUD -->
+            <div class="grid grid-cols-2 gap-4">
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="create" 
+                    class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Crear
+                </button>
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="read" 
+                    class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Buscar
+                </button>
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="update" 
+                    class="w-full bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Actualizar
+                </button>
+                <button 
+                    type="submit" 
+                    name="accion" 
+                    value="delete" 
+                    class="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none">
+                    Eliminar
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

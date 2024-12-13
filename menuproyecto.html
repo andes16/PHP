@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú IPS Vacunate</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(img/fondoMenu.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        h1 {
+            font-size: 90px;
+            color: #0f083a;
+            text-shadow: 2px 2px #cccccc;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #20ffda;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 200px; /* Ancho fijo para todos los botones */
+        }
+        button:hover {
+            background-color: #20ffda;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Menú IPS Vacunate</h1>
+        <nav>
+            <ul>
+                <li><button onclick="redirigirFormulario('tablaCliente.html')">Cliente</button></li>
+                <li><button onclick="redirigirFormulario('tablaProducto.html')">Productos</button></li>
+                <li><button onclick="redirigirFormulario('tablaFactura.html')">Factura</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        function redirigirFormulario(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
